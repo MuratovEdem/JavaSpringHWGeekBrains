@@ -1,4 +1,4 @@
-package org.example.javaspringhwgeekbrains.seminar3.hw;
+package org.example.javaspringhwgeekbrains.seminar4.hw;
 
 public class Homework {
 

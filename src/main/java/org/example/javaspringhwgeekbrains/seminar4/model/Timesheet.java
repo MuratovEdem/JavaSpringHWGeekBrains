@@ -1,4 +1,4 @@
-package org.example.javaspringhwgeekbrains.seminar3.model;
+package org.example.javaspringhwgeekbrains.seminar4.model;
 
 import lombok.Data;
 

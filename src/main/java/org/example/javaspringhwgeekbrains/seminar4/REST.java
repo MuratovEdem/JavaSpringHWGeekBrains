@@ -1,4 +1,4 @@
-package org.example.javaspringhwgeekbrains.seminar3;
+package org.example.javaspringhwgeekbrains.seminar4;
 public class REST {
 
   /**

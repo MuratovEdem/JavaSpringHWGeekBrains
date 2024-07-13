@@ -1,11 +1,9 @@
-package org.example.javaspringhwgeekbrains.seminar3.repository;
+package org.example.javaspringhwgeekbrains.seminar4.repository;
 
 
-import org.example.javaspringhwgeekbrains.seminar3.model.Project;
-import org.example.javaspringhwgeekbrains.seminar3.model.Timesheet;
+import org.example.javaspringhwgeekbrains.seminar4.model.Project;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +15,13 @@ public class ProjectRepository {
     private static Long sequence = 1L;
     private final List<Project> projects = new ArrayList<>();
 
-    public Optional<Project> getById(Long id) {
-        // select * from timesheets where id = $id
+    public Optional<Project> findById(Long id) {
         return projects.stream()
                 .filter(it -> Objects.equals(it.getId(), id))
                 .findFirst();
     }
 
-    public List<Project> getAll() {
+    public List<Project> findAll() {
         return List.copyOf(projects);
     }
 
@@ -38,7 +35,7 @@ public class ProjectRepository {
         projects.stream()
                 .filter(it -> Objects.equals(it.getId(), id))
                 .findFirst()
-                .ifPresent(projects::remove); // если нет - иногда посылают 404 Not Found
+                .ifPresent(projects::remove);
     }
 
 }

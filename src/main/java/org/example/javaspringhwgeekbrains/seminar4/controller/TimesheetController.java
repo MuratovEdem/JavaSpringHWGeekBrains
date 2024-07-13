@@ -1,9 +1,8 @@
-package org.example.javaspringhwgeekbrains.seminar3.controller;
+package org.example.javaspringhwgeekbrains.seminar4.controller;
 
-import org.example.javaspringhwgeekbrains.seminar3.model.Timesheet;
-import org.example.javaspringhwgeekbrains.seminar3.service.TimesheetService;
+import org.example.javaspringhwgeekbrains.seminar4.model.Timesheet;
+import org.example.javaspringhwgeekbrains.seminar4.service.TimesheetService;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,7 +34,7 @@ public class TimesheetController {
   // /timesheets/{id}
   @GetMapping("/{id}") // получить все
   public ResponseEntity<Timesheet> get(@PathVariable Long id) {
-    Optional<Timesheet> ts = service.getById(id);
+    Optional<Timesheet> ts = service.findById(id);
 
     if (ts.isPresent()) {
 //      return ResponseEntity.ok().body(ts.get());
@@ -47,7 +46,7 @@ public class TimesheetController {
 
   @GetMapping // получить все
   public ResponseEntity<List<Timesheet>> getAll() {
-    return ResponseEntity.ok(service.getAll());
+    return ResponseEntity.ok(service.findAll());
   }
 
   @PostMapping // создание нового ресурса
