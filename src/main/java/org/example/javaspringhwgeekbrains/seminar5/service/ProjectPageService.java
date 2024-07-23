@@ -1,9 +1,9 @@
-package org.example.javaspringhwgeekbrains.seminar4.service;
+package org.example.javaspringhwgeekbrains.seminar5.service;
 
 
 import lombok.RequiredArgsConstructor;
-import org.example.javaspringhwgeekbrains.seminar4.model.Project;
-import org.example.javaspringhwgeekbrains.seminar4.page.ProjectPageDto;
+import org.example.javaspringhwgeekbrains.seminar5.model.Project;
+import org.example.javaspringhwgeekbrains.seminar5.page.ProjectPageDto;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

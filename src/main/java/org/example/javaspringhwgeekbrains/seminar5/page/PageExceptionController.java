@@ -1,4 +1,4 @@
-package org.example.javaspringhwgeekbrains.seminar4.page;
+package org.example.javaspringhwgeekbrains.seminar5.page;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;

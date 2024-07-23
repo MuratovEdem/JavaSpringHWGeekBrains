@@ -1,10 +1,10 @@
-package org.example.javaspringhwgeekbrains.seminar4.service;
+package org.example.javaspringhwgeekbrains.seminar5.service;
 
 
 import lombok.RequiredArgsConstructor;
-import org.example.javaspringhwgeekbrains.seminar4.model.Project;
-import org.example.javaspringhwgeekbrains.seminar4.model.Timesheet;
-import org.example.javaspringhwgeekbrains.seminar4.page.TimesheetPageDto;
+import org.example.javaspringhwgeekbrains.seminar5.model.Project;
+import org.example.javaspringhwgeekbrains.seminar5.model.Timesheet;
+import org.example.javaspringhwgeekbrains.seminar5.page.TimesheetPageDto;
 import org.springframework.stereotype.Service;
 
 import java.time.format.DateTimeFormatter;

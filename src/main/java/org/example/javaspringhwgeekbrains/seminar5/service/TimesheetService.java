@@ -1,8 +1,8 @@
-package org.example.javaspringhwgeekbrains.seminar4.service;
+package org.example.javaspringhwgeekbrains.seminar5.service;
 
-import org.example.javaspringhwgeekbrains.seminar4.model.Timesheet;
-import org.example.javaspringhwgeekbrains.seminar4.repository.ProjectRepository;
-import org.example.javaspringhwgeekbrains.seminar4.repository.TimesheetRepository;
+import org.example.javaspringhwgeekbrains.seminar5.model.Timesheet;
+import org.example.javaspringhwgeekbrains.seminar5.repository.ProjectRepository;
+import org.example.javaspringhwgeekbrains.seminar5.repository.TimesheetRepository;
 import org.springframework.stereotype.Service;
 
 
@@ -32,7 +32,10 @@ public class TimesheetService {
   }
 
   public List<Timesheet> findAll(LocalDate createdAtBefore, LocalDate createdAtAfter) {
-    return timesheetRepository.findAll(createdAtBefore, createdAtAfter);
+    if (Objects.isNull(createdAtBefore) && Objects.isNull(createdAtAfter)) {
+      return timesheetRepository.findAll();
+    }
+    return timesheetRepository.findByCreatedAtBetween(createdAtBefore, createdAtAfter);
   }
 
   public Timesheet create(Timesheet timesheet) {
@@ -45,11 +48,10 @@ public class TimesheetService {
     }
 
     timesheet.setCreatedAt(LocalDate.now());
-    return timesheetRepository.create(timesheet);
+    return timesheetRepository.save(timesheet);
   }
 
   public void delete(Long id) {
-    timesheetRepository.delete(id);
+    timesheetRepository.deleteById(id);
   }
-
 }

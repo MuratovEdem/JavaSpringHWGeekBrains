@@ -1,4 +1,4 @@
-package org.example.javaspringhwgeekbrains.seminar4.page;
+package org.example.javaspringhwgeekbrains.seminar5.page;
 
 import lombok.Data;
 
@@ -7,6 +7,7 @@ public class TimesheetPageDto {
 
     private String projectName;
     private String id;
+    private String employeeId;
     private String projectId;
     private String minutes;
     private String createdAt;

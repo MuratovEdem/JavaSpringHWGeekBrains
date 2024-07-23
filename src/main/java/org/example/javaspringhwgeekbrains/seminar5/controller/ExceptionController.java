@@ -1,4 +1,4 @@
-package org.example.javaspringhwgeekbrains.seminar4.controller;
+package org.example.javaspringhwgeekbrains.seminar5.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

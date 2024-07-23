@@ -1,7 +1,7 @@
-package org.example.javaspringhwgeekbrains.seminar4.page;
+package org.example.javaspringhwgeekbrains.seminar5.page;
 
 import lombok.RequiredArgsConstructor;
-import org.example.javaspringhwgeekbrains.seminar4.service.ProjectPageService;
+import org.example.javaspringhwgeekbrains.seminar5.service.ProjectPageService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

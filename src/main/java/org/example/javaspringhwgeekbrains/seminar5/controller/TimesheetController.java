@@ -1,7 +1,7 @@
-package org.example.javaspringhwgeekbrains.seminar4.controller;
+package org.example.javaspringhwgeekbrains.seminar5.controller;
 
-import org.example.javaspringhwgeekbrains.seminar4.model.Timesheet;
-import org.example.javaspringhwgeekbrains.seminar4.service.TimesheetService;
+import org.example.javaspringhwgeekbrains.seminar5.model.Timesheet;
+import org.example.javaspringhwgeekbrains.seminar5.service.TimesheetService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,10 +1,10 @@
-package org.example.javaspringhwgeekbrains.seminar4.service;
+package org.example.javaspringhwgeekbrains.seminar5.service;
 
 
-import org.example.javaspringhwgeekbrains.seminar4.model.Project;
-import org.example.javaspringhwgeekbrains.seminar4.model.Timesheet;
-import org.example.javaspringhwgeekbrains.seminar4.repository.ProjectRepository;
-import org.example.javaspringhwgeekbrains.seminar4.repository.TimesheetRepository;
+import org.example.javaspringhwgeekbrains.seminar5.model.Project;
+import org.example.javaspringhwgeekbrains.seminar5.model.Timesheet;
+import org.example.javaspringhwgeekbrains.seminar5.repository.ProjectRepository;
+import org.example.javaspringhwgeekbrains.seminar5.repository.TimesheetRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,11 +31,11 @@ public class ProjectService {
     }
 
     public Project create(Project project) {
-        return projectRepository.create(project);
+        return projectRepository.save(project);
     }
 
     public void delete(Long id) {
-        projectRepository.delete(id);
+        projectRepository.deleteById(id);
     }
 
     public List<Timesheet> getTimesheets(Long id) {
