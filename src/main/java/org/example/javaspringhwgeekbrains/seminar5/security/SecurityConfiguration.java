@@ -28,9 +28,9 @@ public class SecurityConfiguration {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
         return http.authorizeHttpRequests(requests -> requests
                         .requestMatchers("/home/timesheets/**").hasRole(RoleEnum.ADMIN.getName())
-                        .requestMatchers("/home/projects/**").hasRole(RoleEnum.USER.getName())
-                        .requestMatchers("/timesheets/**").hasRole(RoleEnum.REST.getName())
-                        .requestMatchers("/projects/**").hasRole(RoleEnum.REST.getName())
+                        .requestMatchers("/home/projects/**").hasAnyAuthority(RoleEnum.USER.getName(), RoleEnum.ADMIN.getName())
+                        .requestMatchers("/timesheets/**").hasAnyAuthority(RoleEnum.REST.getName(), RoleEnum.ADMIN.getName())
+                        .requestMatchers("/projects/**").hasAnyAuthority(RoleEnum.REST.getName(), RoleEnum.ADMIN.getName())
                         .anyRequest().authenticated()
         )
                 .formLogin(Customizer.withDefaults())

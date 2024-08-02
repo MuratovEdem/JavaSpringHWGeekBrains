@@ -1,8 +1,11 @@
 package org.example.javaspringhwgeekbrains.seminar5.service;
 
+import org.example.javaspringhwgeekbrains.seminar5.aspect.Recover;
+import org.example.javaspringhwgeekbrains.seminar5.aspect.Timer;
 import org.example.javaspringhwgeekbrains.seminar5.model.Timesheet;
 import org.example.javaspringhwgeekbrains.seminar5.repository.ProjectRepository;
 import org.example.javaspringhwgeekbrains.seminar5.repository.TimesheetRepository;
+import org.slf4j.event.Level;
 import org.springframework.stereotype.Service;
 
 
@@ -13,6 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Service // то же самое, что и Component
+@Timer(level = Level.TRACE)
 public class TimesheetService {
 
   private final TimesheetRepository timesheetRepository;
@@ -23,6 +27,7 @@ public class TimesheetService {
     this.projectRepository = projectRepository;
   }
 
+  @Recover
   public Optional<Timesheet> findById(Long id) {
     return timesheetRepository.findById(id);
   }
